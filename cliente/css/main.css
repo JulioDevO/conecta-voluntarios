@@ -1,0 +1,105 @@
+/* Variáveis do Projeto (Padronização )*/
+:root {
+    --primary: #2D3436;    /* Cinza Escuro */
+    --accent: #0984E3;     /* Azul Conecta (Destaque) */
+    --surface: #FFFFFF;    /* Branco Puro */
+    --bg: #F3F4F6;         /* Cinza de Fundo Suave */
+    --text-main: #1F2937;
+    --text-light: #6B7280;
+    --radius: 8px;         /* Arredondamento padrão */
+}
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--text-main);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container{
+    display: flex;
+    width: 900px;
+    height: 600px;
+    background: var(--surface);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Lado esquerdo - Imagem */
+.auth-visual{
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80') center/cover;
+    position: relative;
+}
+
+.auth-visual::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.visual-content{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 10;
+    color: white;
+}
+
+.visual-content h2{ font-size: 2rem; margin-bottom: 10px; }
+
+/* metade direita do Formulário */
+.auth-form-area{
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-form h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 10px; }
+.header-form p { color: var(--text-light); margin-bottom: 30px; }
+
+/* Inputs */
+.input-group{ margin-bottom: 20px; }
+.input-group label{ display: block; font-size: 0.8rem; margin-bottom: 6px; color: var(--text-main); }
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--radius);
+    outline: none;
+    transition: 0.2s;
+}
+.input-group input:focus{ border-color: var(--accent);}
+
+/* Botões */
+.btn-primary{
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover{ background-color: #076CB8; }
+
+/*Alternar (Login <-> Cadastro)*/
+.toggle-text{ text-align: center; margin-top: 20px; font-size: 0.9rem;}
+.toggle-text a{ color: var(--accent); text-decoration: none; font-weight: bold; cursor: pointer;}
+
+/* Utilitário para esconder abas */
+.hidden { display: none; }
