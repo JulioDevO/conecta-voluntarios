@@ -1,0 +1,16 @@
+# Dependências do Node (Nunca suba isso, é gerado automaticamente)
+node_modules/
+/server/node_modules/
+/client/node_modules/
+
+# Arquivos de Sistema (Lixo do Windows/Mac)
+.DS_Store
+Thumbs.db
+
+# Logs de Erros
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Configurações de Ambiente (Onde ficam as senhas)
+.env
