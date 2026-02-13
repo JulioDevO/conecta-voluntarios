@@ -14,13 +14,19 @@
     font-family: 'Inter', sans-serif;
 }
 
-body{
+/* Body padrão para o site todo (Home, etc) */
+body {
     background-color: var(--bg);
     color: var(--text-main);
+}
+
+/* Body exclusivo para a tela de Login/Cadastro */
+.body-login {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0; /* Garante que não tenha margens sobrando */
 }
 
 .auth-container{
@@ -103,3 +109,86 @@ body{
 
 /* Utilitário para esconder abas */
 .hidden { display: none; }
+
+/* =========================================
+   ESTILOS DA HOME (index.html)
+   ========================================= */
+
+/*Reset básico e tipografia limpa*/
+
+*{box-sizing: border-box; font-family: 'Segoe UI', Tahome, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;} 
+body{margin: 0; background-color: #f3f7f8; color: #333;}
+
+.header-principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo h2{ margin: 0; color: #333;}
+.logo span { color: #007bff; }
+
+/* Botão Azul */
+
+.btn-primary{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+ }
+
+.btn-primary:hover{ background-color: #0056b3;}
+
+/* Hero (Faixa principal) */
+
+.hero{
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; opacity: 0.9; }
+
+/* Grid de Projetos */
+
+.projetos-container{ padding: 50px; max-width: 1200px; margin: 0 auto;}
+.titulo-secao{ text-align: center; margin-bottom: 40px; font-size: 2rem; color: #2c3e50;}
+
+.grid-projetos{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* O Visual do Card do Projeto */
+
+.card-projeto {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #007bff;
+}
+.card-projeto:hover{ transform: translateY(-5px);}
+.card-projeto h3{ margin-top: 0; color: #2c3e50;}
+.ong-nome { color: #7f8c8d; font-size: 0.9rem; margin-bottom: 15px; }
+.descricao { line-height: 1.6; color: #555; margin-bottom: 20px; }
+.btn-secundario {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #007bff;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.btn-secundario:hover { background: #007bff; color: white; }
